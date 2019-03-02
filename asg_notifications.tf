@@ -10,11 +10,11 @@ resource "aws_autoscaling_notification" "ashish_asg_scaling_notification" {
     "autoscaling:EC2_INSTANCE_TERMINATE_ERROR",
   ]
 
-  topic_arn = "${aws_sns_topic.example.arn}"
+  topic_arn = "${aws_sns_topic.ashish-asg-scaling-topic.arn}"
 }
 
-resource "aws_sns_topic" "example" {
-  name = "example-topic"
+resource "aws_sns_topic" "ashish-asg-scaling-topic" {
+  name = "ashish-asg-scaling-topic"
 
   # arn is an exported attribute
 }

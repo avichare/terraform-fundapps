@@ -6,7 +6,7 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 resource "aws_elb" "ashish_elb" {
-  name = "ashish-example-elb"
+  name = "ashish-elb"
 
   # The same availability zone as our instances
   availability_zones = ["${data.aws_availability_zones.available.names}"]
